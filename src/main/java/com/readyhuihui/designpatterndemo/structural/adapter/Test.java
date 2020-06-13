@@ -1,4 +1,4 @@
-package com.readyhuihui.designpatterndemo.behavior.adapter;
+package com.readyhuihui.designpatterndemo.structural.adapter;
 
 /**
  * @Author:lyh

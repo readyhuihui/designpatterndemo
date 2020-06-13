@@ -54,7 +54,7 @@ public class OperateFactory {
         return oper;
     }
 
-    public static void main(String[] args) throws  Exception{
+    public static void main(String[] args) throws Exception {
 //        Operation operationAdd = OperateFactory.createOperation("+");
         Operation operationAdd = OperateFactory.createOperationCls("OperationAdd");
         operationAdd.setValue1(10);

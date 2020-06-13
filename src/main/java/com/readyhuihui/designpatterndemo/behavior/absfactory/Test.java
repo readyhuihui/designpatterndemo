@@ -9,17 +9,17 @@ package com.readyhuihui.designpatterndemo.behavior.absfactory;
 public class Test {
     public static void main(String[] args) {
         CarFactroy carFactroy = new LuxuryFactory();
-       Engine engine= carFactroy.getEngine();
-       Seat seat= carFactroy.getSeat();
-       Tyre tyre = carFactroy.getTyre();
-       engine.run();
-       engine.start();
-       seat.massage();
-       tyre.revolve();
+        Engine engine = carFactroy.getEngine();
+        Seat seat = carFactroy.getSeat();
+        Tyre tyre = carFactroy.getTyre();
+        engine.run();
+        engine.start();
+        seat.massage();
+        tyre.revolve();
         System.out.println("-------------");
-       CarFactroy carFactroy1 =new LowCarFactory();
-       Engine engine1 = carFactroy1.getEngine();
-       engine1.run();
-       engine1.start();
+        CarFactroy carFactroy1 = new LowCarFactory();
+        Engine engine1 = carFactroy1.getEngine();
+        engine1.run();
+        engine1.start();
     }
 }

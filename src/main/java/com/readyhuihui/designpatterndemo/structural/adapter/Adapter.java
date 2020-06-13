@@ -1,4 +1,4 @@
-package com.readyhuihui.designpatterndemo.behavior.adapter;
+package com.readyhuihui.designpatterndemo.structural.adapter;
 
 /*
  * 适配器(类适配方式)
