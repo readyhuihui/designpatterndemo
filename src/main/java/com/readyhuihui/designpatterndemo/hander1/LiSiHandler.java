@@ -13,6 +13,6 @@ public class LiSiHandler implements Handler {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        Factory.register("`", this);
+        Factory.register("李四", this);
     }
 }
