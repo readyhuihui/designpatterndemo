@@ -8,7 +8,4 @@ package com.readyhuihui.designpatterndemo.behavior.singleton.enum2;
 public enum Singleton {
     INSTANCE;
 
-    public Singleton getInstance() {
-        return INSTANCE;
-    }
 }

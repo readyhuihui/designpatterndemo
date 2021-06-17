@@ -13,7 +13,7 @@ public class SingletonSafe {
 
     }
 
-    public static SingletonSafe getInstance() {
+    public static synchronized SingletonSafe getInstance() {
         if (null == instance) {
             instance = new SingletonSafe();
         }

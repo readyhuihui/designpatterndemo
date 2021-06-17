@@ -8,16 +8,23 @@ package com.readyhuihui.designpatterndemo.behavior.singleton.stat;
 public class Singleton {
 
 
+    /**
+     * 在静态内部类中初始化实例对象
+     */
     private static class getInstance {
-        private static final Singleton instance = new Singleton();
+        private static final Singleton INSTANCE = new Singleton();
     }
 
     private Singleton() {
 
     }
 
-    public Singleton getInstance() {
-        return getInstance.instance;
+    /**
+     * 对外提供获取实例的静态方法
+     * @return
+     */
+    public static final Singleton getInstance() {
+        return getInstance.INSTANCE;
     }
 
 

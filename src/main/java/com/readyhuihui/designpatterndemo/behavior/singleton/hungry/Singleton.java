@@ -1,5 +1,7 @@
 package com.readyhuihui.designpatterndemo.behavior.singleton.hungry;
 
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * @Author:lyh
  * @Description:1.饿汉模式
@@ -13,6 +15,9 @@ public class Singleton {
     //提供私有构造函数，屏蔽外界访问
     private Singleton() {
 
+        if(null !=singleton){
+            throw new RuntimeException("单例被侵犯！");
+        }
     }
 
     //对外提供获取实例的静态方法
@@ -22,11 +27,22 @@ public class Singleton {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException, InstantiationException {
 
         Singleton singleton1 = getInstance();
         Singleton singleton2 = getInstance();
         System.out.println(singleton1 == singleton2);
+
+        //问题：以反射方式调用私有构造方法创建出来的非单例 https://www.javaer101.com/en/article/4936217.html
+//        Constructor constructor= Singleton.class.getDeclaredConstructors()[0];
+//        constructor.setAccessible(true);
+//        Singleton singleton1 = (Singleton) constructor.newInstance();
+//        Singleton singleton2 = (Singleton) constructor.newInstance();
+//        System.out.println(singleton1 ==singleton2);
+        //解决办法：在构造方法内加个非空判断，抛除异常。
+
+
+
     }
 
 //    汇总：
